@@ -31,15 +31,7 @@ public class Workspace {
 
     @JsonBackReference
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")  //name je column name iz user tabele za id
+    @JoinColumn(name = "user_id", referencedColumnName = "id") 
     private User user;
-
-    public Workspace merge(@NonNull Workspace otherWorkspace) {
-        setId(otherWorkspace.getId());
-        setName(otherWorkspace.getName());
-        setCoordinates(otherWorkspace.getCoordinates());
-        setSeats(otherWorkspace.getSeats());
-
-        return this;
-    }
+    
 }
