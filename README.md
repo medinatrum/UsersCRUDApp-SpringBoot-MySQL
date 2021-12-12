@@ -10,3 +10,5 @@ JWT Authentication.
 OneToOne Mapping between entities User and UserDetails.
 
 ManyToOne mapping between User and Workspace. 
+
+RestTemplate Unit Tests.
